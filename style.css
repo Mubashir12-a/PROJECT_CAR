@@ -160,6 +160,7 @@ header div:nth-child(2) li::first-letter {
 }
 
 
+/*----------------------------------------------------------*/
 
 
 #MoreOptions {
@@ -277,4 +278,39 @@ header div:nth-child(2) li::first-letter {
   left: 0%;
   opacity: 1;
   transition: all 0.5s;
+}
+
+@media (max-width : 767px){
+    header {
+        height: 35px;
+    }
+
+    header div:nth-child(1) {
+        margin-left: 1%;
+    }
+
+    header div:nth-child(3) {
+        margin-right: 3%;
+    }
+
+    header div:nth-child(2) {
+        width: 78%;
+    }
+
+    header div:nth-child(2) li {
+        font-size: 0.8rem;
+    }
+
+    header div:nth-child(2) li::first-letter {
+        font-size: 1.2rem;
+    }
+
+    header div:nth-child(2) li:hover {
+        font-size: 1rem;
+    }
+
+    header div:nth-child(2) li:hover::after {
+        width: 90%;
+        left: 5%;
+    }
 }
