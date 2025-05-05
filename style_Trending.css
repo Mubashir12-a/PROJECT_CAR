@@ -1,0 +1,213 @@
+#TrendingTitle {
+    /* background-color: white; */
+    display: inline-block;
+    height: 60px;
+    margin-left: 3%;
+    padding: 0 2%;
+    font-size: 3rem;
+    font-family: 'Quicksand';
+    color: white;
+    position: relative;
+    border: 2px solid white;
+    letter-spacing: 2px;
+    transform: translateY(50px);
+}
+
+#TrendingTitle::after {
+    content: "";
+    position: absolute;
+    height: 5%;
+    width: 300%;
+    top: 50%;
+    left: 100%;
+    background-color: white;
+}
+
+#Trending {
+  /* background-color: white; */
+  height: 400px;
+  width: 95%;
+  margin: auto;
+  /* border: 2px solid red; */
+  margin-top: 100px;
+  padding: 0 2%;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+#Trending .ContainCar {
+    /* border: 2px solid white; */
+    height: 80%;
+    width: 33%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background-color: #121212;
+    border-radius: 10px;
+    backdrop-filter: blur(20px);
+    z-index: 1;
+}
+
+#Trending .ContainCar:nth-child(1) {
+    /* background-color: red; */
+    left: 1%;
+}
+
+#Trending .ContainCar:nth-child(2) {
+    /* background-color: green; */
+    left: 33%;
+}
+
+#Trending .ContainCar:nth-child(3) {
+    /* background-color: blue; */
+    left: 66%;
+}
+
+#Trending .ContainCar img {
+    position: absolute;
+}
+
+#Trending .ContainCar img:nth-child(1){
+    height: 80%;
+}
+
+#Trending .ContainCar img:nth-child(2){
+    height: 100%;
+}
+
+#Trending .ContainCar img:nth-child(3){
+    height: 110%;
+}
+
+#Trending .ContainCar img:nth-child(4){
+    height: 130%;
+}
+
+#Trending .ContainCar img:nth-child(5){
+    height: 150%;
+}
+
+#Trending .ContainCar img:nth-child(6){
+    height: 150%;
+    left: -20%;
+}
+
+#Trending .ContainCar img:nth-child(7){
+    height: 70%;
+}
+
+#Trending p {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 40%;
+    /* background-color: rgba(255, 217, 0, 0.471); */
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-weight: bold;
+    font-size: 1.5rem;
+    font-family: "Orbitron";
+    padding: 0 5%;
+    padding-bottom: 15%;
+    box-sizing: border-box;
+    text-decoration: underline;
+}
+
+#Trending .Description {
+    font-size: 0.5rem;
+    padding-top: 30%;
+    text-decoration: none;
+    width: 30%;
+    opacity: 0;
+}
+
+#Trending span:nth-child(1) {
+    display: inline-block;
+    height: 200px;
+    width: 200px;
+    background-color: red;
+    border-radius: 50%;
+    z-index: -10;
+    transform: translate(300%, 40%);
+}
+
+#Trending span:nth-child(2) {
+    display: inline-block;
+    height: 200px;
+    width: 200px;
+    background-color: blue;
+    border-radius: 50%;
+    z-index: -10;
+    transform: translate(200%, -40%);
+}
+
+
+@media(max-width : 767px){
+    #TrendingTitle {
+        font-size: 1.5rem;
+        height: 32px;
+    }
+
+    #TrendingTitle::after {
+        width: 150%;
+    }
+
+    #Trending {
+        height: 180px;
+    }
+
+    #Trending .ContainCar img:nth-child(1){
+        height: 50%;
+    }
+    
+    #Trending .ContainCar img:nth-child(2){
+        height: 60%;
+    }
+    
+    #Trending .ContainCar img:nth-child(3){
+        height: 80%;
+    }
+
+    #Trending .ContainCar img:nth-child(4){
+        height: 90%;
+    }
+    
+    #Trending .ContainCar img:nth-child(5){
+        height: 110%;
+    }
+    
+    #Trending .ContainCar img:nth-child(6){
+        height: 150%;
+        left: -40%;
+    }
+    
+    #Trending .ContainCar img:nth-child(7){
+        height: 50%;
+    }
+
+    #Trending p {
+        font-size: 0.4rem;
+    }
+
+    #Trending .Description {
+        font-size: 0.25rem;
+        padding-top: 60%;
+        width: 40%;
+    }
+
+    #Trending span:nth-child(1) {
+        height: 50px;
+        width: 50px;
+    }
+
+    #Trending span:nth-child(2) {
+        height: 50px;
+        width: 50px;
+    }
+    
+}

@@ -1,0 +1,280 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all 0.5s;
+}
+
+body {
+    background-color: #121212;
+    position: relative;
+    overflow-x: hidden;
+}
+
+
+#Name {
+    /* background-color: white; */
+    height: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+#Name p {
+    font-size: 2rem;
+    font-family: "Dosis";
+    font-weight: bold;
+    letter-spacing: 5px;
+    color: ghostwhite;
+}
+
+#Name .Img_1 {
+    height: 150%;
+    position: absolute;
+    left: -5%;
+}
+
+#Name .Img_2 {
+    height: 200%;
+    position: absolute;
+    right: -5%;
+}
+
+#Name .Img_1 {
+    animation: Anima 10s linear infinite;
+}
+
+#Name .Img_2 {
+    animation: Anima2 10s linear infinite;
+}
+
+@keyframes Anima {
+    0% {
+        left: -5%;
+    }
+    100% {
+        left: 100%;
+    }
+}
+
+@keyframes Anima2 {
+    0% {
+        right: -5%;
+    }
+    100% {
+        right: 100%;
+    }
+}
+
+header {
+    background-color: #121212;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2%;
+    height: 50px;
+    position: relative;
+}
+
+header::after {
+    content: "";
+    position: absolute;
+    background-color: white;
+    height: 1%;
+    width: 50%;
+    left: 25%;
+    top: 110%;
+}
+
+header div:nth-child(1) {
+    margin-left: 5%;
+    height: 100%;
+}
+
+header div:nth-child(1) img {
+    height: 100%;
+}
+
+header div:nth-child(3) {
+    margin-right: 5%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header div:nth-child(3) img {
+    height: 50%;
+}
+
+header div:nth-child(2) {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 50%;
+    height: auto;
+    cursor: default;
+}
+
+header div:nth-child(2) li {
+    background: linear-gradient(to top, white, cyan);
+    background-clip: text;
+    color: transparent;
+    position: relative;
+    list-style: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: "Poppins";
+    letter-spacing: 1px;
+    font-size: 1.2rem;
+}
+
+header div:nth-child(2) li::after {
+    content: "";
+    position: absolute;
+    height: 3%;
+    width: 20%;
+    bottom: 0;
+    left: 40%;
+    background-color: white;
+}
+
+header div:nth-child(2) li:hover::after {
+    box-shadow: 0 0 5px 2px cyan,
+                0 0 10px 4px blue,
+                0 0 15px 6px green;
+    left: -10%;
+    width: 120%;
+    transition: all 0.5s;
+}
+
+header div:nth-child(2) li:hover {
+    font-size: 1.3rem;
+}
+
+header div:nth-child(2) li::first-letter {
+    color: red;
+    font-size: 1.8rem;
+}
+
+
+
+
+#MoreOptions {
+    background-color: rgba(0, 0, 0, 0.289);
+    backdrop-filter: blur(5px);
+    position: absolute;
+    top: 5%;
+    right: -25%;
+    height: 95dvh;
+    width: 25%;
+    border: 2px solid white;
+    border-radius: 10px;
+    overflow: hidden;
+    z-index: 100;
+}
+
+#MoreOptions #Back {
+    position: absolute;
+    height: 5%;
+    top: 1%;
+    left: 2%;
+}
+
+#MoreOptions div {
+    margin-top: 10dvh;
+    margin-left: 10%;
+    height: auto;
+}
+
+#MoreOptions div li {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    height: 50px;
+    width: 80%;
+    cursor: pointer;
+}
+
+#MoreOptions div li::after {
+    content: "";
+    position: absolute;
+    height: 50px;
+    width: 100%;
+    background: linear-gradient(to right,#4169E1, transparent);
+    opacity: 0;
+    left: -150%;
+    z-index: -1;
+    transition: all 0.5s;
+}
+
+#MoreOptions div li img {
+    height: 50%;
+    margin-right: 5%;
+    padding-left: 5%;
+}
+
+#MoreOptions div li p {
+    color: white;
+    display: inline-block;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    font-weight: 400;
+    letter-spacing: 1px;
+    font-family: "Dosis";
+    text-decoration: underline;
+    position: relative;
+}
+
+#MoreOptions div li:hover::after {
+    background: linear-gradient(to right,#4169E1, transparent);
+    left: 0%;
+    opacity: 1;
+    transition: all 0.5s;
+}
+
+#MoreOptions #Setting {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    bottom: 5%;
+    height: 50px;
+    cursor: pointer;
+}
+
+#MoreOptions #Setting::after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(to right,#800020, transparent);
+    left: -100%;
+    opacity: 0;
+    transition: all 0.5s;
+    z-index: -1;
+}
+
+#MoreOptions #Setting p {
+    list-style: none;
+    color: white;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-family: "Orbitron";
+    padding: 3px;
+}
+
+#MoreOptions #Setting img {
+    height: 50%;
+    margin-right: 5%;
+    padding-left: 5%;
+}
+
+#MoreOptions #Setting:hover::after {
+  left: 0%;
+  opacity: 1;
+  transition: all 0.5s;
+}
